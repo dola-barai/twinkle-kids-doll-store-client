@@ -1,7 +1,11 @@
+import Banner from "../Banner";
+import Gallery from "../Gallery";
+
 const Container = () => {
     return (
         <div>
-            <h2>Container Coming....</h2>
+            <Banner></Banner>
+            <Gallery></Gallery>
         </div>
     );
 };
