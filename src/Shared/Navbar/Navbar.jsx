@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <div className='hover:text-blue-700'>
                     <Link to='/' className='font-semibold text-gray-500 hover:text-blue-700 '>Home</Link>
-                    <Link to='/' className='ml-3 font-semibold text-gray-500 hover:text-blue-700 '>All Toys</Link>
+                    <Link to='/allToys' className='ml-3 font-semibold text-gray-500 hover:text-blue-700 '>All Toys</Link>
                     <Link to='/' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>My Toys</Link>
                     <Link to='/' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>Add a Toy</Link>
                     <Link to='/' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>Blogs</Link>
