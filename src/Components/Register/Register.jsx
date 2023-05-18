@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
+import Navbar from "../../Shared/Navbar/Navbar";
+import Footer from "../../Shared/Footer/Footer";
 
 const Register = () => {
 
@@ -23,7 +25,9 @@ const Register = () => {
         
     }
     return (
-        <div className="hero m bg-base-200 py-20">
+        <div>
+            <Navbar></Navbar>
+            <div className="hero m bg-base-200 py-20">
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                 <div className="card-body">
                 <h1 className="text-3xl font-bold text-center mb-3">Please Register</h1>
@@ -54,6 +58,8 @@ const Register = () => {
                     <p className="text-center">Already have an account? <Link to='/login' className="text-blue-500">Please Login</Link></p>
                 </div>
             </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 };

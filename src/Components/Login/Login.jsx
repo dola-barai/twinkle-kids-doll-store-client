@@ -1,9 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
+import Navbar from "../../Shared/Navbar/Navbar";
+import Footer from "../../Shared/Footer/Footer";
 
 const Login = () => {
-    const { login } = useContext(AuthContext)
+    const [error, setError] = useState(null)
+    const { loginUser, signPopUpGoogle } = useContext(AuthContext);
+    
 
     const handleLogin = event => {
         event.preventDefault();
@@ -12,16 +16,36 @@ const Login = () => {
         const password = form.password.value;
         console.log( email, password);
 
-        login(email, password)
+        loginUser(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            form.reset();
+            setError('');
+        })
+        .catch(error => {
+            setError('')
+            console.error(error.message);
+            setError(error.message);
+            event.target.reset();
+        })
+    }
+
+    const handleGoogleLogin = () => {
+        signPopUpGoogle()
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error);
+        })
     }
 
     return (
-        <div className="hero m bg-base-200 py-20">
+        <div>
+            <Navbar></Navbar>
+            <div className="hero m bg-base-200 py-20">
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                 <div className="card-body">
                 <h1 className="text-3xl font-bold text-center mb-3">Login now!</h1>
@@ -44,13 +68,16 @@ const Login = () => {
                     </form>
                     <div className="divider">Or sign in with</div>
                     <div className="text-center">
-                        <button className="btn btn-circle btn-outline">
-                            <p className="font-bold text-2xl">G</p>
+                        <button onClick={handleGoogleLogin} className="btn btn-circle btn-outline">
+                            <p  className="font-bold text-2xl">G</p>
                         </button>
                     </div>
                     <p className="text-center">Have not an account? <Link to='/register' className="text-blue-500">Please Register</Link></p>
+                    <p className='text-red-500'>{error}</p>
                 </div>
             </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 };
