@@ -1,13 +1,17 @@
+import { useLoaderData } from "react-router-dom";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import AllToysRow from "./AllToysRow";
 
 const AllToys = () => {
+
+    const allToys = useLoaderData();
+
     return (
         <div>
             <Navbar></Navbar>
             <div>
-            <h2 className="text-5xl">All toys:  </h2>
+                <h2>AllToys: {allToys.length}</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
@@ -23,7 +27,10 @@ const AllToys = () => {
                     </thead>
                     <tbody>
                         {
-                            <AllToysRow></AllToysRow>
+                            allToys.map(allToy => <AllToysRow
+                            key={allToy._id}
+                            allToy={allToy}
+                            ></AllToysRow>)
                         }
 
                     </tbody>
