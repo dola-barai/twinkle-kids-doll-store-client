@@ -37,7 +37,7 @@ const BabyDolls = () => {
                             <td>Baby Doll</td>
                             <td>$580</td>
                             <td>4.9/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 3 */}
                         <tr>
@@ -46,7 +46,7 @@ const BabyDolls = () => {
                             <td>Baby Doll</td>
                             <td>$500</td>
                             <td>4.7/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                     </tbody>
                 </table>

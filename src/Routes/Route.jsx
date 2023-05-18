@@ -4,7 +4,7 @@ import Login from "../Components/Login/Login";
 import Register from "../Components/Register/Register";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
-import AllToys from "../Pages/AllToys";
+import AllToys from "../Pages/AllToys/AllToys";
 import Blogs from "../Pages/Blogs";
 
 const router = createBrowserRouter([

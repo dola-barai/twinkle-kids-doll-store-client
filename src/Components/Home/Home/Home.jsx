@@ -6,7 +6,7 @@ import Container from "./Container/Container";
 
 const Home = () => {
     return (
-        <div className="mx-5 mt-5">
+        <div className="">
             <Navbar></Navbar>
             <Container></Container>
             <Outlet></Outlet>

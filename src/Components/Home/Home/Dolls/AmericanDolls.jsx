@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import p1 from '../../../../assets/5.jpeg'
 import p2 from '../../../../assets/6.jpeg'
 import p3 from '../../../../assets/7.jpeg'
@@ -26,7 +27,7 @@ const AmericanDolls = () => {
                             <td>American Doll</td>
                             <td>$500</td>
                             <td>4.8/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 2 */}
                         <tr>
@@ -35,7 +36,7 @@ const AmericanDolls = () => {
                             <td>American Doll</td>
                             <td>$560</td>
                             <td>4.6/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 3 */}
                         <tr>
@@ -44,7 +45,7 @@ const AmericanDolls = () => {
                             <td>American Doll</td>
                             <td>$530</td>
                             <td>4.8/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                     </tbody>
                 </table>

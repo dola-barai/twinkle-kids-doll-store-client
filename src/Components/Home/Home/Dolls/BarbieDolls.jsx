@@ -2,6 +2,7 @@ import p1 from '../../../../assets/11.jpg'
 import p2 from '../../../../assets/12.jpg'
 import p3 from '../../../../assets/13.jpg'
 import p4 from '../../../../assets/10.jpg'
+import { Link } from 'react-router-dom';
 
 const BarbieDolls = () => {
     return (
@@ -26,7 +27,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5030</td>
                             <td>4.8/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 2 */}
                         <tr>
@@ -35,7 +36,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5900</td>
                             <td>4.8/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 3 */}
                         <tr>
@@ -44,7 +45,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5010</td>
                             <td>4.8/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 4 */}
                         <tr>
@@ -53,7 +54,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5020</td>
                             <td>4.8/5</td>
-                            <td><button className="btn btn-sm">View Details</button></td>
+                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                     </tbody>
                 </table>
