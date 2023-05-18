@@ -1,41 +1,55 @@
+import p1 from '../../../../assets/5.jpeg'
+import p2 from '../../../../assets/6.jpeg'
+import p3 from '../../../../assets/7.jpeg'
+
 const AmericanDolls = () => {
     return (
-        <div className="overflow-x-auto">
-  <table className="table w-full">
-    {/* head */}
-    <thead>
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-      </tr>
-    </thead>
-    <tbody>
-      {/* row 1 */}
-      <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
-      </tr>
-      {/* row 2 */}
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      {/* row 3 */}
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+        <div>
+            <div className="overflow-x-auto">
+                <table className="table w-full">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Picture</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Rating</th>
+                            <th>View Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {/* row 1 */}
+                        <tr>
+                            <th>1</th>
+                            <td><img className='h-20 w-20' src={p1} alt="" /></td>
+                            <td>American Doll</td>
+                            <td>$500</td>
+                            <td>4.8/5</td>
+                            <td><button className="btn btn-sm">View Details</button></td>
+                        </tr>
+                        {/* row 2 */}
+                        <tr>
+                            <th>2</th>
+                            <td><img className='h-20 w-20' src={p2} alt="" /></td>
+                            <td>American Doll</td>
+                            <td>$560</td>
+                            <td>4.6/5</td>
+                            <td><button className="btn btn-sm">View Details</button></td>
+                        </tr>
+                        {/* row 3 */}
+                        <tr>
+                            <th>3</th>
+                            <td><img className='h-20 w-20' src={p3} alt="" /></td>
+                            <td>American Doll</td>
+                            <td>$530</td>
+                            <td>4.8/5</td>
+                            <td><button className="btn btn-sm">View Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     );
 };
 

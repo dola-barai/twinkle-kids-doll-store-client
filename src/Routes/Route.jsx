@@ -5,6 +5,7 @@ import Register from "../Components/Register/Register";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import AllToys from "../Pages/AllToys";
+import Blogs from "../Pages/Blogs";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
     {
       path: "/allToys",
       element: <PrivateRoute><AllToys></AllToys></PrivateRoute>
+    },
+    {
+      path: "/blogs",
+      element: <Blogs></Blogs>
+    },
+    {
+      path: "/view",
+      element: <PrivateRoute></PrivateRoute>
     }
 
   ]);

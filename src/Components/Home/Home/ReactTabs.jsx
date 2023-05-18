@@ -6,7 +6,12 @@ import AmericanDolls from './Dolls/AmericanDolls';
 
 const ReactTabs = () => {
     return (
-        <Tabs className="my-10">
+        <div>
+            <div className="text-center mb-8">
+                <h2 className="text-4xl font-bold italic">Dolls Category</h2>
+                <p>Check out what Barbie, American and Baby Dolls by clicking Tabs.</p>
+            </div>
+            <Tabs className="my-10">
             <TabList>
                 <Tab>Baby Dolls</Tab>
                 <Tab>Barbie Dolls</Tab>
@@ -29,6 +34,7 @@ const ReactTabs = () => {
                 </div>
             </TabPanel>
         </Tabs>
+        </div>
     );
 };
 

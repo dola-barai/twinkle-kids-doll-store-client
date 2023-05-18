@@ -6,8 +6,8 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="">
-                <h1 className="mb-5 text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
-                <p className="mb-5 text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
+                <h1 className="mb-5 sm:text-4xl md:text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
+                <p className="mb-5 sm:text-2xl md:text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
                 <button className="btn btn-primary">View Special Dolls</button>
               </div>
             </div>
@@ -22,8 +22,8 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
             <div className="">
-                <h1 className="mb-5 text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
-                <p className="mb-5 text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
+                <h1 className="mb-5 sm:text-4xl md:text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
+                <p className="mb-5 sm:text-2xl md:text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
                 <button className="btn btn-primary">View Special Dolls</button>
               </div>
             </div>
@@ -38,8 +38,8 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
             <div className="">
-                <h1 className="mb-5 text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
-                <p className="mb-5 text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
+                <h1 className="mb-5 sm:text-4xl md:text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
+                <p className="mb-5 sm:text-2xl md:text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
                 <button className="btn btn-primary">View Special Dolls</button>
               </div>
             </div>
