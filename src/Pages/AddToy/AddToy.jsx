@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 const AddToy = () => {
-
+    const { user } = useContext(AuthContext)
     const handleAddToy = event => {
         event.preventDefault();
 
@@ -28,7 +30,23 @@ const AddToy = () => {
             details: details
         }
         console.log(addToy);
+
+        fetch('http://localhost:5000/addToy', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addToy)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                alert('Add a Toy Data successfully')
+            }
+        })
     }
+    
     return (
         <div>
             <Navbar></Navbar>
@@ -51,13 +69,13 @@ const AddToy = () => {
                 <label className="label">
                     <span className="label-text">Seller Name</span>
                 </label>
-                <input type="text" name="seller" placeholder="Seller Name" className="input input-bordered" />
+                <input type="text" defaultValue={user?.displayName} name="seller" placeholder="Seller Name" className="input input-bordered" />
             </div>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Seller Email</span>
                 </label>
-                <input type="text" defaultValue='' placeholder="example@gmail.com" name="email" className="input input-bordered" />
+                <input type="text" defaultValue={user?.email} placeholder="example@gmail.com" name="email" className="input input-bordered" />
             </div>
             <div className="form-control">
                 <label className="label">
