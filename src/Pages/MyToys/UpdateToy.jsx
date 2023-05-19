@@ -1,11 +1,12 @@
-import { useContext } from "react";
-import Footer from "../../Shared/Footer/Footer";
+import { useLoaderData } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
-import { AuthContext } from "../../Providers/AuthProviders";
+import Footer from "../../Shared/Footer/Footer";
 
-const AddToy = () => {
-    const { user } = useContext(AuthContext)
-    const handleAddToy = event => {
+const UpdateToy = () => {
+    const toy = useLoaderData();
+    const {  photoURL, dollName, seller, email, subCategory,  ratings } = toy;
+    
+    const handleUpdateToy = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -18,7 +19,7 @@ const AddToy = () => {
         const price = form.price.value;
         const quantity = form.quantity.value;
         const details = form.details.value;
-        const addToy = {
+        const updateToy = {
             photoURL: image,
             dollName: doll,
             seller: seller,
@@ -29,60 +30,47 @@ const AddToy = () => {
             quantity: quantity,
             details: details
         }
-        console.log(addToy);
-
-        fetch('http://localhost:5000/addToy', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(addToy)
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.insertedId){
-                alert('Add a Toy Data successfully')
-            }
-        })
+        console.log(updateToy);
+      
+        
     }
     
     return (
         <div>
             <Navbar></Navbar>
             <div className="m-10">
-            <h2 className="text-4xl font-bold text-center mb-5">Add a Toy</h2>
-            <form onSubmit={handleAddToy}>
+            <h2 className="text-4xl font-bold text-center mb-5">Update Toy: {dollName}</h2>
+            <form onSubmit={handleUpdateToy}>
             <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Photo URL</span>
                 </label>
-                <input type="url"  placeholder="Photo URL" name="image" className="input input-bordered" />
+                <input type="url"  placeholder="Photo URL" name="image" defaultValue={photoURL} className="input input-bordered" />
             </div>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Doll Name</span>
                 </label>
-                <input type="text" name="doll" placeholder="Doll Name" className="input input-bordered" />
+                <input type="text" name="doll" defaultValue={dollName} placeholder="Doll Name" className="input input-bordered" />
             </div>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Seller Name</span>
                 </label>
-                <input type="text" defaultValue={user?.displayName} name="seller" placeholder="Seller Name" className="input input-bordered" />
+                <input type="text" defaultValue={seller} name="seller" placeholder="Seller Name" className="input input-bordered" />
             </div>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Seller Email</span>
                 </label>
-                <input type="text" defaultValue={user?.email} placeholder="example@gmail.com" name="email" className="input input-bordered" />
+                <input type="text" defaultValue={email} placeholder="example@gmail.com" name="email" className="input input-bordered" />
             </div>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Sub Category</span>
                 </label>
-                <select name="subCategory">
+                <select defaultValue={subCategory} name="subCategory">
                    <option value="Baby Dolls">Baby Dolls</option>
                    <option value="Barbie Dolls">Barbie Dolls</option>
                    <option value="American Dolls">American Dolls</option>
@@ -92,7 +80,7 @@ const AddToy = () => {
                 <label className="label">
                     <span className="label-text">Rating</span>
                 </label>
-                <select name="ratings">
+                <select name="ratings" defaultValue={ratings}>
                    <option value="4.5">4.5</option>
                    <option value="4.6">4.6</option>
                    <option value="4.7">4.7</option>
@@ -106,14 +94,14 @@ const AddToy = () => {
                 <label className="label">
                     <span className="label-text">Price</span>
                 </label>
-                <input type="number" defaultValue='' name="price" placeholder="$" className="input input-bordered" />
+                <input type="number" name="price" placeholder="$" className="input input-bordered" />
             </div>
            
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Available Quantity</span>
                 </label>
-                <input type="number" defaultValue='' name="quantity" placeholder="quantity" className="input input-bordered" />
+                <input type="number" name="quantity" placeholder="quantity" className="input input-bordered" />
             </div>
             
             </div>
@@ -124,7 +112,7 @@ const AddToy = () => {
                 <input type="text" name="details" placeholder="Details" className="input input-bordered" />
             </div>
             <div className="form-control mt-6">
-                <button className="btn btn-primary">Add A Toy</button>
+                <button className="btn btn-primary">Update Toy</button>
             </div>
             </form>
             </div>
@@ -133,4 +121,4 @@ const AddToy = () => {
     );
 };
 
-export default AddToy;
+export default UpdateToy;
