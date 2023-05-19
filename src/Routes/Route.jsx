@@ -7,6 +7,8 @@ import PrivateRoute from "./PrivateRoute";
 import AllToys from "../Pages/AllToys/AllToys";
 import Blogs from "../Pages/Blogs";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
+import 'react-toastify/dist/ReactToastify.css';
+import AddToy from "../Pages/AddToy/AddToy";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +46,10 @@ const router = createBrowserRouter([
     {
       path: "/view",
       element: <PrivateRoute></PrivateRoute>
+    },
+    {
+      path: "/addToy",
+      element: <AddToy></AddToy>
     }
 
   ]);

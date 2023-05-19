@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 
 const AllToysRow = ({ allToy }) => {
-    const { _id, seller, toy_name,  sub_category, price, available_quantity} = allToy;
+    const { _id, img, seller, toy_name,  sub_category, price, available_quantity} = allToy;
     return (
         <tr>
+        <th>
+            <img className="h-16 w-16" src={img} alt="" />
+        </th>
         <th>
             {seller}
         </th>

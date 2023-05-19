@@ -3,8 +3,8 @@ import p1 from '../../../../assets/1.jpeg'
 import p2 from '../../../../assets/2.jpg'
 import p3 from '../../../../assets/3.jpeg'
 
+
 const BabyDolls = () => {
-    
     return (
         <div>
             <div className="overflow-x-auto">
@@ -29,6 +29,7 @@ const BabyDolls = () => {
                             <td>$530</td>
                             <td>4.5/5</td>
                             <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            
                         </tr>
                         {/* row 2 */}
                         <tr>
