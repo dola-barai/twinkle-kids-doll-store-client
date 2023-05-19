@@ -25,8 +25,11 @@ const Navbar = () => {
                 <div className='hover:text-blue-700'>
                     <Link to='/' className='font-semibold text-gray-500 hover:text-blue-700 '>Home</Link>
                     <Link to='/allToys' className='ml-3 font-semibold text-gray-500 hover:text-blue-700 '>All Toys</Link>
-                    <Link to='/' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>My Toys</Link>
-                    <Link to='/addToy' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>Add a Toy</Link>
+                    {user ? 
+                    <><Link to='/addToy' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>Add a Toy</Link>
+                    <Link to='/myToy' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>My Toys</Link>
+                    </> : <></>
+                    }  
                     <Link to='/blogs' className='ml-3 font-semibold text-gray-500 hover:text-blue-700'>Blogs</Link>
                 </div>
             </div>
