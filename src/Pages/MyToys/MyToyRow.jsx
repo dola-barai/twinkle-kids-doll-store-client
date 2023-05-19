@@ -1,7 +1,5 @@
-import React from 'react';
-
-const MyToyRow = ({myToy}) => {
-    const { photoURL, dollName, seller, email, subCategory,  ratings, price, quantity } = myToy;
+const MyToyRow = ({myToy, handleDelete}) => {
+    const { _id, photoURL, dollName, seller, email, subCategory,  ratings, price, quantity } = myToy;
     return (
         <tr>
         <th>
@@ -32,7 +30,7 @@ const MyToyRow = ({myToy}) => {
              <button className="btn btn-sm btn-info">Update</button>
         </td>
         <td>
-            <button className="btn btn-sm btn-error">Delete</button>
+            <button onClick={() => handleDelete(_id)} className="btn btn-sm btn-error">Delete</button>
         </td>
     </tr>
     );
