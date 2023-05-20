@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { AuthContext } from "../../Providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
@@ -42,7 +43,12 @@ const AddToy = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('Add a Toy Data successfully')
+                Swal.fire(
+                    'Good job!',
+                    'Add a Toy Data successfully',
+                    'success'
+                  )
+                
             }
         })
     }

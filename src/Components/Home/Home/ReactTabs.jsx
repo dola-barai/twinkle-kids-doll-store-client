@@ -6,6 +6,7 @@ import AmericanDolls from './Dolls/AmericanDolls';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProviders';
 import { Navigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const ReactTabs = () => {
@@ -13,7 +14,8 @@ const ReactTabs = () => {
 
     const handleView = () => {
         if (!user) {
-          alert('You have to log in first to view details.');
+          Swal.fire('You have to log in first to view details.')
+          
           return <Navigate to='/login' replace={true}></Navigate>
         } 
     };

@@ -3,6 +3,7 @@ import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import MyToyRow from "./MyToyRow";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
 
@@ -11,8 +12,17 @@ const MyToys = () => {
 
 
     const handleDelete = id => {
-        const proceed = confirm('Are you sure want to delete')
-        if(proceed){
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          })
+          .then((result) => {
+            if (result.isConfirmed){
             fetch(`https://twinkle-kids-doll-store-server.vercel.app/addToy/${id}`, {
                 method: 'DELETE'
             }
@@ -21,12 +31,17 @@ const MyToys = () => {
             .then(data => {
                 console.log(data);
                 if(data.deletedCount > 0){
-                    alert('deleted successful')
+                    Swal.fire(
+                        'Deleted!',
+                        'Your Toy has been deleted.',
+                        'success'
+                      )
                     const remaining = userToys.filter(toy => toy._id !== id)
                     setUserToys(remaining)
                 }
             })
         }
+    })
     }
 
     return (
