@@ -7,12 +7,13 @@ import { useState } from "react";
 const MyToys = () => {
 
     const toys = useLoaderData();
-    const [ toy, setToy] = useState([])
+    const [userToys, setUserToys] = useState([]);
+
 
     const handleDelete = id => {
         const proceed = confirm('Are you sure want to delete')
         if(proceed){
-            fetch(`http://localhost:5000/addToy/${id}`, {
+            fetch(`https://twinkle-kids-doll-store-server.vercel.app/addToy/${id}`, {
                 method: 'DELETE'
             }
             )
@@ -21,8 +22,8 @@ const MyToys = () => {
                 console.log(data);
                 if(data.deletedCount > 0){
                     alert('deleted successful')
-                    const remaining = toy.filter(toy => toy._id !== id)
-                    setToy(remaining)
+                    const remaining = userToys.filter(toy => toy._id !== id)
+                    setUserToys(remaining)
                 }
             })
         }
@@ -32,7 +33,7 @@ const MyToys = () => {
         <div>
             <Navbar></Navbar>
             <div>
-                <h2>My Toys: {toys.length}</h2>
+            <h2>My Toys: {toys.length}</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}

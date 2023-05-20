@@ -34,7 +34,7 @@ const UpdateToy = () => {
         console.log(updatedToy);
 
         // send data to the server
-        fetch(`http://localhost:5000/addToy/${_id}`, {
+        fetch(`https://twinkle-kids-doll-store-server.vercel.app/addToy/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

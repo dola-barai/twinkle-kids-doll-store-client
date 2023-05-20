@@ -31,7 +31,7 @@ const AddToy = () => {
         }
         console.log(addToy);
 
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://twinkle-kids-doll-store-server.vercel.app/addToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

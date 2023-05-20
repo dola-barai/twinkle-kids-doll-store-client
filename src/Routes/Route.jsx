@@ -34,12 +34,12 @@ const router = createBrowserRouter([
     {
       path: "/allToys",
       element: <PrivateRoute><AllToys></AllToys></PrivateRoute>,
-      loader: () => fetch('http://localhost:5000/allToys?limit=20'),
+      loader: () => fetch('https://twinkle-kids-doll-store-server.vercel.app/allToys?limit=20'),
     },
     {
       path: '/allToys/:id',
       element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-      loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
+      loader: ({params}) => fetch(`https://twinkle-kids-doll-store-server.vercel.app/allToys/${params.id}`)
     },
     {
       path: "/blogs",
@@ -56,12 +56,12 @@ const router = createBrowserRouter([
     {
       path: "/myToy",
       element: <MyToys></MyToys>,
-      loader: () => fetch('http://localhost:5000/addToy')
+      loader: () => fetch('https://twinkle-kids-doll-store-server.vercel.app/addToy')
     },
     {
       path: "/updateToy/:id",
       element: <UpdateToy></UpdateToy>,
-      loader: ({params}) => fetch(`http://localhost:5000/addToy/${params.id}`)
+      loader: ({params}) => fetch(`https://twinkle-kids-doll-store-server.vercel.app/addToy/${params.id}`)
     },
 
   ]);
