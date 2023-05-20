@@ -1,10 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
+import Swal from "sweetalert2";
 
 const UpdateToy = () => {
     const toy = useLoaderData();
-    const {  photoURL, dollName, seller, email, subCategory,  ratings } = toy;
+    const { _id, photoURL, dollName, seller, email, subCategory,  ratings } = toy;
     
     const handleUpdateToy = event => {
         event.preventDefault();
@@ -19,7 +20,7 @@ const UpdateToy = () => {
         const price = form.price.value;
         const quantity = form.quantity.value;
         const details = form.details.value;
-        const updateToy = {
+        const updatedToy = {
             photoURL: image,
             dollName: doll,
             seller: seller,
@@ -30,9 +31,28 @@ const UpdateToy = () => {
             quantity: quantity,
             details: details
         }
-        console.log(updateToy);
-      
-        
+        console.log(updatedToy);
+
+        // send data to the server
+        fetch(`http://localhost:5000/addToy/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedToy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Toy Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                }
+            })
     }
     
     return (

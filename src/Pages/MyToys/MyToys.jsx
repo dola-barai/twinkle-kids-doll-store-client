@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const MyToys = () => {
 
-    const myToys = useLoaderData();
-    const [ toys, setToys] = useState([])
+    const toys = useLoaderData();
+    const [ toy, setToy] = useState([])
 
     const handleDelete = id => {
         const proceed = confirm('Are you sure want to delete')
@@ -21,8 +21,8 @@ const MyToys = () => {
                 console.log(data);
                 if(data.deletedCount > 0){
                     alert('deleted successful')
-                    const remaining = toys.filter(toy => toy._id !== id)
-                    setToys(remaining)
+                    const remaining = toy.filter(toy => toy._id !== id)
+                    setToy(remaining)
                 }
             })
         }
@@ -32,7 +32,7 @@ const MyToys = () => {
         <div>
             <Navbar></Navbar>
             <div>
-                <h2>My Toys: {myToys.length}</h2>
+                <h2>My Toys: {toys.length}</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
@@ -46,15 +46,16 @@ const MyToys = () => {
                             <th>Ratings</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Details</th>
                             <th>Update</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            myToys.map(myToy => <MyToyRow
-                            key={myToy._id}
-                            myToy={myToy}
+                            toys.map(toy => <MyToyRow
+                            key={toy._id}
+                            toy={toy}
                             handleDelete={handleDelete}
                             ></MyToyRow>)
                         }
