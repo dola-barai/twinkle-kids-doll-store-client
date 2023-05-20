@@ -1,4 +1,5 @@
 import Banner from "../Banner";
+import ChooseProduct from "../ChooseProduct";
 import ClientSays from "../Client/ClientSays";
 import Gallery from "../Gallery";
 import ReactTabs from "../ReactTabs";
@@ -8,6 +9,7 @@ const Container = () => {
         <div>
             <Banner></Banner>
             <Gallery></Gallery>
+            <ChooseProduct></ChooseProduct>
             <ReactTabs></ReactTabs>
             <ClientSays></ClientSays>
         </div>
