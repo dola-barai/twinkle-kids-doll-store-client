@@ -4,17 +4,16 @@ const ChooseProduct = () => {
             <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold italic">Why Choose Our Products</h2>
             </div>
-            <div className="grid grid-cols-3 gap-4 items-center">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 items-center">
                 <div className="grid grid-cols-1">
-                    <div className="rounded-xl">
-                        <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Quality</h2>
-                                <p>Customers value high-quality products that are well-made and durable.</p>
-                            </div>
+                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                        <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Quality</h2>
+                            <p>Customers value high-quality products that are well-made and durable.</p>
                         </div>
                     </div>
+
                     <div className="card lg:card-side bg-base-100 shadow-xl">
                         <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
                         <div className="card-body">
@@ -35,13 +34,11 @@ const ChooseProduct = () => {
                     <img className="rounded-lg" src="https://ae01.alicdn.com/kf/Hf48ef3e454d44539a9488dedfdeaee1dB.jpg" alt="" />
                 </div>
                 <div className="grid grid-cols-1">
-                    <div className="rounded-xl">
-                        <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
-                            <div className="card-body">
-                                <h2 className="card-title">Reputation and Trust</h2>
-                                <p>If your doll shop has built a strong reputation for quality products and excellent customer service over time.</p>
-                            </div>
+                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                        <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Reputation and Trust</h2>
+                            <p> If your doll shop has built a strong reputation for quality products and excellent customer service over time.</p>
                         </div>
                     </div>
                     <div className="card lg:card-side bg-base-100 shadow-xl">

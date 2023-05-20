@@ -21,7 +21,7 @@ const Gallery = () => {
                 <h2 className="text-4xl font-bold italic">Shop Our Product</h2>
                 <p>All varieties dolls available in different shapes and types by special Doll maker.</p>
             </div>
-            <div className='grid sm:grid-cols-3 md:grid-cols-5 gap-4'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4'>
                 <div className="card w-48 h-52 bg-base-100 shadow-xl">
                     <figure className='px-5 pt-5'><img src={p1} /></figure>
                     <p className="text-center font-bold">Baby Dolls</p>

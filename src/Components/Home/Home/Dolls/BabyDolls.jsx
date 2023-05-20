@@ -4,7 +4,10 @@ import p2 from '../../../../assets/2.jpg'
 import p3 from '../../../../assets/3.jpeg'
 
 
-const BabyDolls = () => {
+
+const BabyDolls = ({ handleView }) => {
+
+
     return (
         <div>
             <div className="overflow-x-auto">
@@ -28,7 +31,7 @@ const BabyDolls = () => {
                             <td>Baby Doll</td>
                             <td>$530</td>
                             <td>4.5/5</td>
-                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            <td><Link to='/view'><button onClick={handleView} className="btn btn-sm">View Details</button></Link></td>
                             
                         </tr>
                         {/* row 2 */}
@@ -38,7 +41,7 @@ const BabyDolls = () => {
                             <td>Baby Doll</td>
                             <td>$580</td>
                             <td>4.9/5</td>
-                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            <td><Link to='/view'><button onClick={handleView} className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 3 */}
                         <tr>
@@ -47,7 +50,7 @@ const BabyDolls = () => {
                             <td>Baby Doll</td>
                             <td>$500</td>
                             <td>4.7/5</td>
-                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            <td><Link to='/view'><button onClick={handleView} className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                     </tbody>
                 </table>

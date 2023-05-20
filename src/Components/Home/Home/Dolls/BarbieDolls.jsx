@@ -4,7 +4,11 @@ import p3 from '../../../../assets/13.jpg'
 import p4 from '../../../../assets/10.jpg'
 import { Link } from 'react-router-dom';
 
-const BarbieDolls = () => {
+
+
+const BarbieDolls = ({ handleView }) => {
+
+
     return (
         <div className="overflow-x-auto">
                 <table className="table w-full">
@@ -27,7 +31,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5030</td>
                             <td>4.8/5</td>
-                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            <td><Link to='/view'><button onClick={handleView} className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 2 */}
                         <tr>
@@ -36,7 +40,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5900</td>
                             <td>4.8/5</td>
-                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            <td><Link to='/view'><button onClick={handleView} className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 3 */}
                         <tr>
@@ -45,7 +49,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5010</td>
                             <td>4.8/5</td>
-                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            <td><Link to='/view'><button onClick={handleView} className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                         {/* row 4 */}
                         <tr>
@@ -54,7 +58,7 @@ const BarbieDolls = () => {
                             <td>Barbie Doll</td>
                             <td>$5020</td>
                             <td>4.8/5</td>
-                            <td><Link to='/view'><button className="btn btn-sm">View Details</button></Link></td>
+                            <td><Link to='/view'><button onClick={handleView} className="btn btn-sm">View Details</button></Link></td>
                         </tr>
                     </tbody>
                 </table>

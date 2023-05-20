@@ -3,8 +3,20 @@ import 'react-tabs/style/react-tabs.css';
 import BarbieDolls from './Dolls/BarbieDolls';
 import BabyDolls from './Dolls/BabyDolls';
 import AmericanDolls from './Dolls/AmericanDolls';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Providers/AuthProviders';
+import { Navigate } from 'react-router-dom';
+
 
 const ReactTabs = () => {
+    const { user } = useContext(AuthContext)
+
+    const handleView = () => {
+        if (!user) {
+          alert('You have to log in first to view details.');
+          return <Navigate to='/login' replace={true}></Navigate>
+        } 
+    };
     return (
         <div>
             <div className="text-center mb-8">
@@ -20,17 +32,23 @@ const ReactTabs = () => {
 
             <TabPanel>
                 <div>
-                    <BabyDolls></BabyDolls>
+                    <BabyDolls
+                    handleView={handleView}
+                    ></BabyDolls>
                 </div>
             </TabPanel>
             <TabPanel>
                 <div>
-                    <BarbieDolls></BarbieDolls>
+                    <BarbieDolls
+                    handleView={handleView}
+                    ></BarbieDolls>
                 </div>
             </TabPanel>
             <TabPanel>
                 <div>
-                    <AmericanDolls></AmericanDolls>
+                    <AmericanDolls
+                    handleView={handleView}
+                    ></AmericanDolls>
                 </div>
             </TabPanel>
         </Tabs>

@@ -9,8 +9,8 @@ const Container = () => {
         <div>
             <Banner></Banner>
             <Gallery></Gallery>
-            <ChooseProduct></ChooseProduct>
             <ReactTabs></ReactTabs>
+            <ChooseProduct></ChooseProduct>
             <ClientSays></ClientSays>
         </div>
     );
