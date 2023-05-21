@@ -56,7 +56,7 @@ const router = createBrowserRouter([
     {
       path: "/myToy",
       element: <MyToys></MyToys>,
-      loader: () => fetch('https://twinkle-kids-doll-store-server.vercel.app/addToy')
+      loader: () => fetch(`https://twinkle-kids-doll-store-server.vercel.app/addToy`)
     },
     {
       path: "/updateToy/:id",
