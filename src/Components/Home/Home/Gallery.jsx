@@ -13,8 +13,16 @@ import p12 from '../../../assets/12.jpg'
 import p13 from '../../../assets/13.jpg'
 import p14 from '../../../assets/14.jpg'
 import p15 from '../../../assets/15.jpeg'
+import { useEffect } from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 const Gallery = () => {
+
+    useEffect( () => {
+        Aos.init({duration: 2000})
+    }, [])
     return (
         <div className="my-10">
             <div className="text-center mb-8">
@@ -22,63 +30,63 @@ const Gallery = () => {
                 <p>All varieties dolls available in different shapes and types by special Doll maker.</p>
             </div>
             <div className='grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4'>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl"  data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p1} /></figure>
                     <p className="text-center font-bold">Baby Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p2} /></figure>
                     <p className="text-center font-bold">Baby Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p3} /></figure>
                     <p className="text-center font-bold">Baby Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p4} /></figure>
                     <p className="text-center font-bold">American Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p5} /></figure>
                     <p className="text-center font-bold">American Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p6} /></figure>
                     <p className="text-center font-bold">American Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p7} /></figure>
                     <p className="text-center font-bold">American Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p8} /></figure>
                     <p className="text-center font-bold">American Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p9} /></figure>
                     <p className="text-center font-bold">Barbie Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p10} /></figure>
                     <p className="text-center font-bold">Barbie Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p11} /></figure>
                     <p className="text-center font-bold">Barbie Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p12} /></figure>
                     <p className="text-center font-bold">Barbie Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p13} /></figure>
                     <p className="text-center font-bold">Barbie Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p14} /></figure>
                     <p className="text-center font-bold">Barbie Dolls</p>
                 </div>
-                <div className="card w-48 h-52 bg-base-100 shadow-xl">
+                <div className="card w-48 h-52 bg-base-100 shadow-xl" data-aos='zoom-in-up'>
                     <figure className='px-5 pt-5'><img src={p15} /></figure>
                     <p className="text-center font-bold">Barbie Dolls</p>
                 </div>
