@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
+import useTitle from "../../hook/useTitle";
 
 const Register = () => {
-
+    useTitle('Twinkle Kids Doll Store | Register')
     const { createUser } = useContext(AuthContext);
 
     const handleRegistration = event => {

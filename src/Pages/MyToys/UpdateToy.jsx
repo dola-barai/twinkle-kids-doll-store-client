@@ -2,8 +2,10 @@ import { useLoaderData } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 const UpdateToy = () => {
+    useTitle('Twinkle Kids Doll Store | Update Toy')
     const toy = useLoaderData();
     const { _id, photoURL, dollName, seller, email, subCategory,  ratings } = toy;
     

@@ -1,8 +1,10 @@
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
+import useTitle from "../hook/useTitle";
 
 
 const Blogs = () => {
+    useTitle('Twinkle Kids Doll Store | Blogs')
     return (
         <div>
             <Navbar></Navbar>

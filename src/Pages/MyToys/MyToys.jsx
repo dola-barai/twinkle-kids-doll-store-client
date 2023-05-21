@@ -4,9 +4,10 @@ import Navbar from "../../Shared/Navbar/Navbar";
 import MyToyRow from "./MyToyRow";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 const MyToys = () => {
-
+    useTitle('Twinkle Kids Doll Store | My Toy')
     const toys = useLoaderData();
     const [userToys, setUserToys] = useState([]);
 

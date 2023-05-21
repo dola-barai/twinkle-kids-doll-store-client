@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
+import useTitle from "../../hook/useTitle";
 
 const Login = () => {
     const [error, setError] = useState(null)
     const { loginUser, signPopUpGoogle } = useContext(AuthContext);
-    
+    useTitle('Twinkle Kids Doll Store | Login')
 
     const handleLogin = event => {
         event.preventDefault();

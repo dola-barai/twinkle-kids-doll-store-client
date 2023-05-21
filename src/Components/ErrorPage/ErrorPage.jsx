@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useTitle from "../../hook/useTitle";
 
 const ErrorPage = () => {
+    useTitle('Twinkle Kids Doll Store | Login')
     return (
         <div>
             <div>

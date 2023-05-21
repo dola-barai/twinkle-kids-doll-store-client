@@ -3,8 +3,10 @@ import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 const AddToy = () => {
+    useTitle('Twinkle Kids Doll Store | Add a Toy')
     const { user } = useContext(AuthContext)
     const handleAddToy = event => {
         event.preventDefault();

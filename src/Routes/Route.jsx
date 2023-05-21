@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     {
       path: "/allToys",
       element: <PrivateRoute><AllToys></AllToys></PrivateRoute>,
-      loader: () => fetch('http://localhost:5000/allToys'),
+      loader: () => fetch('https://twinkle-kids-doll-store-server.vercel.app/allToys'),
     },
     {
       path: '/allToys/:id',

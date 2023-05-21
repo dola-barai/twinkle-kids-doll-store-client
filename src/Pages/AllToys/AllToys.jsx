@@ -2,9 +2,10 @@ import { useLoaderData } from "react-router-dom";
 import Footer from "../../Shared/Footer/Footer";
 import Navbar from "../../Shared/Navbar/Navbar";
 import AllToysRow from "./AllToysRow";
+import useTitle from "../../hook/useTitle";
 
 const AllToys = () => {
-
+    useTitle('Twinkle Kids Doll Store | All Toy')
     const allToys = useLoaderData();
 
     return (
