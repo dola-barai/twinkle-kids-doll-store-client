@@ -1,14 +1,16 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
 import useTitle from "../../hook/useTitle";
 
 const Register = () => {
+    const navigate = useNavigate()
     useTitle('Twinkle Kids Doll Store | Register')
     const { createUser } = useContext(AuthContext);
 
+    const from = location.state?.from?.pathname || '/login';
     const handleRegistration = event => {
         event.preventDefault();
         const form = event.target;
@@ -20,6 +22,7 @@ const Register = () => {
         createUser(email, password)
         .then(result => {
             const user = result.user;
+            navigate(from, { replace: true });
             console.log(user);
         })
         .catch(error => console.log(error))

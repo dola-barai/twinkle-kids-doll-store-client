@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Navbar from "../../Shared/Navbar/Navbar";
 import Footer from "../../Shared/Footer/Footer";
@@ -7,9 +7,11 @@ import useTitle from "../../hook/useTitle";
 
 const Login = () => {
     const [error, setError] = useState(null)
+    const navigate = useNavigate()
     const { loginUser, signPopUpGoogle } = useContext(AuthContext);
     useTitle('Twinkle Kids Doll Store | Login')
 
+    const from = location.state?.from?.pathname || '/';
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -20,6 +22,7 @@ const Login = () => {
         loginUser(email, password)
         .then(result => {
             const loggedUser = result.user;
+            navigate(from, { replace: true });
             console.log(loggedUser);
             form.reset();
             setError('');
@@ -36,11 +39,13 @@ const Login = () => {
         signPopUpGoogle()
         .then(result => {
             const loggedUser = result.user;
+            navigate(from, { replace: true });
             console.log(loggedUser);
         })
         .catch(error => {
             console.log(error);
         })
+        
     }
 
     return (

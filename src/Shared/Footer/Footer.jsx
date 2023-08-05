@@ -1,13 +1,15 @@
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo1.png'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-center p-10 bg-rose-200 text-base-content rounded">
+            <footer className="footer footer-center p-10 bg-[#03203C] text-white rounded">
                 <div className="">
                     <div>
-                       <img src={logo} alt="" />
+                       <img className='h-12 rounded-full text-center' src={logo} alt="" />
+                       
                     </div>
                     <div>
+                    <p className='text-white text-center text-2xl font-semibold'>Twinkle - Kids Doll Store</p>
                         <div className='mt-4 font-bold'>Contact Information:</div>
                         <p className='mt-2'>Address: 32/4 Shamtola, Bashir Road, Dhaka</p>
                         <p className='mt-2'>Helpline: 992986466767, 01988866437</p>

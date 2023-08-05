@@ -6,7 +6,7 @@ const ChooseProduct = () => {
             </div>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 items-center">
                 <div className="grid grid-cols-1">
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <div className="card lg:card-side bg-white rounded-none">
                         <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Quality</h2>
@@ -14,14 +14,14 @@ const ChooseProduct = () => {
                         </div>
                     </div>
 
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <div className="card lg:card-side bg-white rounded-none">
                         <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Variety</h2>
                             <p> A diverse range of dolls can attract customers with different preferences.</p>
                         </div>
                     </div>
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <div className="card lg:card-side bg-white rounded-none">
                         <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Customization Options</h2>
@@ -34,21 +34,21 @@ const ChooseProduct = () => {
                     <img className="rounded-lg" src="https://ae01.alicdn.com/kf/Hf48ef3e454d44539a9488dedfdeaee1dB.jpg" alt="" />
                 </div>
                 <div className="grid grid-cols-1">
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <div className="card lg:card-side bg-white rounded-none">
                         <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Reputation and Trust</h2>
                             <p> If your doll shop has built a strong reputation for quality products and excellent customer service over time.</p>
                         </div>
                     </div>
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <div className="card lg:card-side bg-white rounded-none">
                         <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Competitive Pricing</h2>
                             <p> Offering competitive prices for your dolls compare into the market can attract price-conscious customers.</p>
                         </div>
                     </div>
-                    <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <div className="card lg:card-side bg-white rounded-none">
                         <figure><img className="rounded-full p-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzddbQT3tYLo9ZflnJ9NY047HhAdonDtdPvQ&usqp=CAU" alt="Movie" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Online Presence</h2>
