@@ -25,7 +25,7 @@ const Gallery = () => {
     }, [])
     return (
         <div className="my-10">
-            <div className="text-center mb-8">
+            <div className="text-center">
                 <h2 className="text-4xl font-bold italic">Image Gallery</h2>
                 <p>All varieties dolls available in different shapes and types by special Doll maker.</p>
             </div>
