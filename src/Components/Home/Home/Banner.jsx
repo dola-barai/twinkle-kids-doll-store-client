@@ -2,13 +2,12 @@ const Banner = () => {
     return (
         <div className='carousel'>
             <div id="slide1" className="carousel-item relative w-full">
-            <div className="hero min-h-screen" style={{ backgroundImage: `url("https://img.freepik.com/free-vector/background-template-design-with-happy-girl-pink-pajamas_1308-42324.jpg?w=740&t=st=1684387648~exp=1684388248~hmac=fe8443e442bfc6d0caaf6cae0a5114bdfed29e2a27559deb0beeacdc15d44542")` }}>
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero min-h-screen" style={{ backgroundImage: `url("https://img.freepik.com/free-psd/maternity-baby-shower-background_23-2150237221.jpg?w=740&t=st=1691331644~exp=1691332244~hmac=83ab7ebb713ad2ee9c1a549b187c1697e21e2e9d7f8fbc7c439fdad61c0363b6")` }}>
+            <div className="hero-overlay bg-opacity-25"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="">
-                <h1 className="mb-5 sm:text-4xl md:text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
-                <p className="mb-5 sm:text-2xl md:text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
-               
+                <h1 className="mb-5 sm:text-4xl md:text-7xl m-5 font-serif text-orange-600"><span className="text-4xl  uppercase text-orange-800">Welcome to</span> <br /> Twinkle - Kid's Doll Store</h1>
+                <p className="mb-5 sm:text-2xl md:text-3xl text-gray-600">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
               </div>
             </div>
           </div>
@@ -22,8 +21,8 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
             <div className="">
-                <h1 className="mb-5 sm:text-4xl md:text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
-                <p className="mb-5 sm:text-2xl md:text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
+                <h1 className="mb-5 sm:text-4xl md:text-7xl font-serif text-orange-300"><span className="text-4xl uppercase text-orange-800">Welcome to</span> <br /> Twinkle - Kid's Doll Store</h1>
+                <p className="mb-5 sm:text-2xl md:text-3xl text-gray-600">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
               </div>
             </div>
           </div>
@@ -37,8 +36,8 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
             <div className="">
-                <h1 className="mb-5 sm:text-4xl md:text-7xl font-semibold font-mono">Welcome to <br /> Twinkle - Kid's Doll Store</h1>
-                <p className="mb-5 sm:text-2xl md:text-3xl font-semibold ">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
+                <h1 className="mb-5 sm:text-4xl md:text-7xl font-serif text-orange-300"><span className="text-4xl uppercase text-orange-800">Welcome to</span> <br /> Twinkle - Kid's Doll Store</h1>
+                <p className="mb-5 sm:text-2xl md:text-3xl text-gray-600">In our Doll Store, you can find all the available models of dolls for your Baby.</p>
               </div>
             </div>
           </div>

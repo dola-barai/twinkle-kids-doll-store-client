@@ -1,3 +1,5 @@
+import Tilt from 'react-parallax-tilt';
+
 const ChooseProduct = () => {
     return (
         <div className="my-10 mx-3">
@@ -30,8 +32,28 @@ const ChooseProduct = () => {
                     </div>
                 </div>
 
+
                 <div>
-                    <img className="rounded-lg" src="https://ae01.alicdn.com/kf/Hf48ef3e454d44539a9488dedfdeaee1dB.jpg" alt="" />
+                    <Tilt
+                        className="tilt-img"
+                        tiltMaxAngleX={20}
+                        tiltMaxAngleY={20}
+                        perspective={900}
+                        scale={1}
+                        transitionSpeed={200}
+                        gyroscope={true}
+                    >
+                        <div className="relative max-w-full overflow-hidden rounded-lg">
+                            <div className=" w-48 md:w-full transition-transform duration-[5000ms] ease-linear transform translate-y-0 ] rounded-lg">
+                                <img
+                                    src="https://img.freepik.com/free-vector/beautiful-princess-cartoon-character-sticker_1308-60026.jpg?w=360&t=st=1691330799~exp=1691331399~hmac=004abd1d38a8e5ef5fc46a4d660256dee9ef887574127ff5982b1c05c7c7495e"
+                                    alt=""
+                                    className="w-full object-cover object-top rounded-lg"
+                                />
+                            </div>
+                        </div>
+
+                    </Tilt>
                 </div>
                 <div className="grid grid-cols-1">
                     <div className="card lg:card-side bg-white rounded-none">

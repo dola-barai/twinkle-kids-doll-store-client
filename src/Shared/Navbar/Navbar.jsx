@@ -17,21 +17,22 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar z-10 w-full bg-[#03203C] text-orange-600">
+        <div className="navbar z-10 w-full bg-[#120E43] text-orange-600">
             <div className="navbar-start">
                 <img className='h-12 rounded-full' src={logo} alt="" />
                 <p className='text-center text-orange-700 font-serif uppercase text-2xl font-semibold ms-2'>Twinkle</p>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <div className=''>
-                    <Link to='/' className='font-semibold  hover:text-red-900 '>Home</Link>
-                    <Link to='/allToys' className='ml-3 font-semibold hover:text-red-900 '>All Toys</Link>
+                    <Link to='/' className=' font-serif  hover:text-red-900 '>Home</Link>
+                    <Link to='/allToys' className='ml-3  font-serif hover:text-red-900 '>Products</Link>
+                    <Link to='/allToys' className='ml-3  font-serif hover:text-red-900 '>Shop</Link>
                     {user ? 
-                    <><Link to='/addToy' className='ml-3 font-semibold hover:text-red-900'>Add a Toy</Link>
-                    <Link to='/myToy' className='ml-3 font-semibold hover:text-red-900'>My Toys</Link>
+                    <><Link to='/addToy' className='ml-3  font-serif hover:text-red-900'>Add Product</Link>
+                    <Link to='/myToy' className='ml-3  font-serif hover:text-red-900'>My Items</Link>
                     </> : <></>
                     }  
-                    <Link to='/blogs' className='ml-3 font-semibold hover:text-red-900'>Blogs</Link>
+                
                 </div>
             </div>
             <div className="navbar-end">

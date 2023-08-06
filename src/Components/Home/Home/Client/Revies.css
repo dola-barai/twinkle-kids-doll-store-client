@@ -1,0 +1,18 @@
+.testimonials-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bgImageD{
+    background-image: url('https://img.freepik.com/free-photo/adorable-puppet-show-with-copy-space_23-2149097389.jpg?w=740&t=st=1691328573~exp=1691329173~hmac=7d96631ce10ca0278d659dd22d84f5297c210257c53af4eb4f89d412eb301853');
+    background-repeat: no-repeat;
+    background-size: cover
+}  
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    /* Add your desired styles for the content */
+  }
